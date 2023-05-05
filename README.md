@@ -1,4 +1,4 @@
-# Auto-GPT-Plugins
+# Auto-GPT-Plugins C
 
 > ⚠️💀 **WARNING** 💀⚠️:
 > Review the code of any plugin you use thoroughly, as plugins can execute any Python code, potentially leading to malicious activities, such as stealing your API keys.
