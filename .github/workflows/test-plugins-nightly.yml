@@ -1,10 +1,10 @@
-name: Close inactive issues
+name: Test plugins nightly
 on:
   schedule:
     - cron: "30 19 * * *"
 
 jobs:
-  close-issues:
+  test-plugins-nightly:
     runs-on: ubuntu-latest
     permissions:
       issues: write
