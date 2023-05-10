@@ -6,6 +6,8 @@
 > ⚙️ **WORK IN PROGRESS** ⚙️:
 > The plugin api is not yet stabilized. If you are coding a plugin, expect it to change in the next few versions.
 
+![Nightly Plugin Installation Status](https://github.com/Significant-Gravitas/Auto-GPT-Plugins/actions/workflows/test-plugins-nightly.yml/badge.svg)
+
 ## Installation
 
 **_⚠️This is a work in progress⚠️_**

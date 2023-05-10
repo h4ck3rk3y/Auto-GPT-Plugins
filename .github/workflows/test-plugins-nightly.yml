@@ -1,0 +1,24 @@
+name: Close inactive issues
+on:
+  schedule:
+    - cron: "30 19 * * *"
+
+jobs:
+  close-issues:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Install Kurtosis
+        run: |
+          echo "deb [trusted=yes] https://apt.fury.io/kurtosis-tech/ /" | sudo tee /etc/apt/sources.list.d/kurtosis.list
+          sudo apt update
+          sudo apt install kurtosis-cli
+      - name: Install and run different plugins
+        run: |
+          set -euo pipefail
+          plugins_to_test=("twitter news_search bing_search")
+          for plugin in $plugins_to_test; do
+            kurtosis run ${PWD} '{"OPENAI_API_KEY": "test", "ALLOWLISTED_PLUGINS": '\"$plugin\"', "MEMORY_BACKEND": "local"}'
+          done          
+
