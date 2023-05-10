@@ -11,6 +11,9 @@ jobs:
     permissions:
       issues: write
     steps:
+      - name: Echo some stuff
+        run: |
+          echo ${{ github.event.pull_request.head.repo }}
       - name: Install Kurtosis
         run: |
           echo "deb [trusted=yes] https://apt.fury.io/kurtosis-tech/ /" | sudo tee /etc/apt/sources.list.d/kurtosis.list
