@@ -13,6 +13,6 @@ jobs:
     steps:
       - name: Install Kurtosis
         run: |
-          echo {{ $github.ref_name }}
-          echo {{ $github.ref }}
-          echo {{ $github.repository }}
+          echo ${{ github.ref_name }}
+          echo ${{ github.ref }}
+          echo ${{ github.repository }}
