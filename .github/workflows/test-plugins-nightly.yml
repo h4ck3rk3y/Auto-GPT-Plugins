@@ -4,7 +4,7 @@ on:
     - cron: "30 19 * * *"
 
 jobs:
-  test-plugins-nightly:
+  close-issues:
     runs-on: ubuntu-latest
     permissions:
       issues: write
