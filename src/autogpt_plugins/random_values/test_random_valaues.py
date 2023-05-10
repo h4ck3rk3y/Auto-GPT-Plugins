@@ -141,7 +141,6 @@ class TestRandomValueCommands:
         assert len(result) == 5
         for password in result:
             assert len(password) == 10
-            # Passwords should contain letters, numbers, and symbols
             assert is_password(password)
 
     def test_generate_password_using_strings(self):
@@ -149,7 +148,6 @@ class TestRandomValueCommands:
         assert len(result) == 5
         for password in result:
             assert len(password) == 10
-            # Passwords should contain letters, numbers, and symbols
             assert is_password(password)
 
     def test_generate_password_using_missing_length(self):
